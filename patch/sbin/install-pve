@@ -32,6 +32,7 @@ fi
 # 国内源确认
 echo -e "${INFO} 请确认系统已更换为国内软件源！"
 echo -e "${INFO} 网络环境可以稳定访问官方源，可忽略！"
+echo -e "${INFO} 图文教程参考 [\033[92m https://zhou.pp.ua \033[0m]"
 read -p "$(echo -e "${OPTIONS} 是否已更换为国内源？[Y/n]: ")" CONFIRM_SOURCE
 CONFIRM_SOURCE=${CONFIRM_SOURCE:-Y}
 if [[ "${CONFIRM_SOURCE}" =~ ^[Nn]$ ]]; then
