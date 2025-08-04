@@ -1,7 +1,7 @@
 #!/bin/bash
 # =======================================================================================
 #  脚本名称：install-pve
-#  适用系统：Debian 12 (bookworm)
+#  适用系统：Debian 12 (bookworm) | Debian 13 (trixie)( 暂不支持 )
 #  适用架构：ARM64（aarch64 / arm64）
 #  脚本功能：Armbian ARM64 系统安装 Proxmox VE
 #  功能说明：配置国内源、设置静态网络、添加 PVE 源并安装、内存占用优化、配置网桥及配置 IPV6 参数
