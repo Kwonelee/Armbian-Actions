@@ -30,8 +30,8 @@ check_env() {
   fi
 
   source /etc/os-release
-  if [[ "${VERSION_CODENAME}" != "bookworm" ]]; then
-    error "当前非 Debian 12 (bookworm) 系统！"
+  if [[ "${VERSION_CODENAME}" != "bookworm" && "${VERSION_CODENAME}" != "trixie" ]]; then
+    error "当前系统 [\033[91m ${VERSION_CODENAME} \033[0m] 不支持！"
   fi
 
   ARCH=$(uname -m)

@@ -5,7 +5,7 @@ echo "Copying General patches..."
 cp -f ${GITHUB_WORKSPACE}/patch/config/* config/kernel/
 cp -f ${GITHUB_WORKSPACE}/patch/boards/* config/boards/
 # cp -f ${GITHUB_WORKSPACE}/patch/sbin/* packages/bsp/common/usr/sbin/
-if [[ "${RELEASE}" == "bookworm" ]]; then
+if [[ "${RELEASE}" == "bookworm" || "${RELEASE}" == "trixie" ]]; then
   echo "执行完整复制（包含 install-pve）"
   rsync -av "${GITHUB_WORKSPACE}/patch/sbin/" packages/bsp/common/usr/sbin/
 else

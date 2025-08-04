@@ -45,7 +45,13 @@ jobs:
                 exit 1
               fi
               ;;
-            rockchip64|meson64|meson)
+            meson)
+              if [ "${{ inputs.BRANCH }}" != "current" ]; then
+                echo "meson only supports current branch."
+                exit 1
+              fi
+              ;;
+            rockchip64|meson64)
               if [ "${{ inputs.BRANCH }}" = "vendor" ]; then
                 echo "${{ inputs.LinuxFamily }} does not support vendor branch."
                 exit 1
