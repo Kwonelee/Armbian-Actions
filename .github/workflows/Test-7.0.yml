@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - 'meson64'
+          - 'rockchip64'
       BRANCH:
         description: 'Linux Branch'
         default: 'edge'
