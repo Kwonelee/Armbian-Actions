@@ -191,7 +191,7 @@ jobs:
           tar -tzf "../kernel-${KERNEL_VERSION}-${LINUX_FAMILY}.tar.gz" > /dev/null || { echo "Failed to verify tar.gz file"; exit 1; }
 
       - name: Upload Kernel to Release
-        uses: ophub/upload-to-release@main
+        uses: ophub/upload-to-releases@main
         with:
           tag: "Kernel-${{ env.LINUX_FAMILY }}"
           artifacts: "/mnt/workdir/build/output/kernel-${{ env.KERNEL_VERSION }}-${{ env.LINUX_FAMILY }}.tar.gz"
@@ -211,7 +211,7 @@ jobs:
           sleep 15 && "${GITHUB_WORKSPACE}/scripts/sha256.sh"
 
       - name: Upload SHA256 to Release
-        uses: ophub/upload-to-release@main
+        uses: ophub/upload-to-releases@main
         with:
           tag: "Kernel-${{ env.LINUX_FAMILY }}"
           artifacts: "/mnt/workdir/build/output/sha256.txt"
